@@ -1,86 +1,104 @@
-{include ../../system/css/reset.css}
-{include ../../system/css/common.css}
-
-html, body{
-	width: 100%;
-	height: 100%;
-	background: #484848;
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #484848;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-	position: relative;
+body {
+    position: relative;
 }
 
-em{
-	display: none;
+em {
+    display: none;
 }
 
-#extra, #view{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 640px;
-	height: 480px;
-	margin: -280px auto auto -320px;
-	text-align: left;
-	background: #fff;
+#extra, #view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: auto;
+    max-width: 640px;
+    max-height: 480px;
+    margin: -50% auto auto -45%;
+    text-align: left;
+    background: #fff;
+    transform: translate(-50%, -50%);
 }
 
-#view{
-	display: block;
-	background: transparent url(blank.gif) repeat 0 0;
-	cursor: default;
-	z-index: 20;
+#view {
+    display: block;
+    background: transparent url(blank.gif) repeat 0 0;
+    cursor: default;
+    z-index: 20;
 }
 
-#extra{
-	background: #000;
+#extra {
+    background: #000;
 }
 
-#extra .layer{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 640px;
-	height: 480px;
-	z-index: 10;
+#extra .layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
 }
 
-#fork{
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 356px;
-	height: 92px;
-	cursor: pointer;
-	background-image: url(fork.gif);
-	z-index: 0;
+#fork {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 356px;
+    height: 92px;
+    cursor: pointer;
+    background-image: url(fork.gif);
+    z-index: 0;
 }
 
-#desc{
-	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 50%;
-	height: 80px;
-	color: #ccc;
-	line-height: 40px;
-	margin-top: 200px;
-	text-align: center;
-	font-size: 14px;
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 768px) {
+    #extra, #view {
+        width: 90%;
+        height: auto;
+        margin: -45% auto auto -45%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #desc {
+        width: 90%;
+        position: relative;
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #fork {
+        width: 50%;
+        height: auto;
+        right: 0;
+        top: 0;
+    }
 }
 
-#desc a{
-	color: #318fe1;
-}
+@media only screen and (max-width: 480px) {
+    #extra, #view {
+        width: 100%;
+        margin: -40% auto auto -50%;
+    }
 
-#browser{
-	font-size: 14px;
-	line-height: 16px;
-}
+    #desc {
+        font-size: 10px;
+        margin-top: 10px;
+        line-height: 16px;
+    }
 
-#browser .b{
-	color: #fff;
-	font-weight: 700;
+    #fork {
+        width: 100%;
+        height: auto;
+    }
 }
