@@ -3,21 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="description" content="A simple HTML5 Template">
-<meta name="author" content="dron">
+<meta name="author" content="Code Crafter">
 <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="icon" href="white_on_trans.png" type="image/x-icon">
+<link rel="icon" href="logo copy.png" type="image/x-icon">
 <link rel="stylesheet" href="index.css">
 <title>Fruit Ninja</title>
 <!--[if lt IE 9]><script>document.createElement("canvas");</script><![endif]-->
 </head>
 <body>
-<div id="extra"></div>
-<div id="desc">
-	<div>code-crafter-projects<a href="http://www.code-projects.org" target="_blank"></a></div>
-	<div id="browser"></div>
-</div>
-<script src="all.js"></script>
+	<!-- Loading screen -->
+	<div id="loading-container" class="loading-container">
+        <img src="logo copy.png" alt="Logo" class="logo">
+        <div class="loading-text">Loading...</div>
+    </div>
+	
+	<!-- Game content -->
+	<div id="extra"></div>
+	<div id="desc">
+		<div>code-crafter-projects<a href="http://www.code-projects.org" target="_blank"></a></div>
+		<div id="browser"></div>
+	</div>
+	
+	<script src="all.js"></script>
+	<script>
+        // Set a minimum display time for the loading screen
+        const minLoadingTime = 5000; // 5000 milliseconds = 5 seconds
+        const loadingStartTime = new Date().getTime();
+
+        window.addEventListener('load', function() {
+            const currentTime = new Date().getTime();
+            const elapsedTime = currentTime - loadingStartTime;
+            const remainingTime = minLoadingTime - elapsedTime;
+
+            if (remainingTime > 0) {
+                setTimeout(hideLoadingScreen, remainingTime);
+            } else {
+                hideLoadingScreen();
+            }
+        });
+
+        function hideLoadingScreen() {
+            document.getElementById('loading-container').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
