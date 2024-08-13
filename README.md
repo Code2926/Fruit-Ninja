@@ -51,4 +51,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) 
 
 ## Contact
 
-For any questions or feedback, please reach out to [your-email@example.com](peekaboo29266@gmail.com]) or [https://github.com/Code2926](https://github.com/Code2926).
+For any questions or feedback, please reach out to [peekaboo29266@gmail.com](peekaboo29266@gmail.com) or [https://github.com/Code2926](https://github.com/Code2926).
