@@ -3,7 +3,7 @@
 ## Overview
 
 Fruit Ninja is a simple, browser-based game where players slice floating fruit using quick swipes. This project showcases a loading screen, game content, and responsive design to adapt to different devices. It’s built with HTML5, CSS3, and JavaScript.
-![Frite Ninja](fruite-ninja.jpeg)
+![Fruit Ninja](fruit-ninja.jpeg)
 
 ## Features
 
